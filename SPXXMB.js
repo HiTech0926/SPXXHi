@@ -15,7 +15,7 @@
 // @match       https://help.minecraft.net/hc/en-us/articles/*
 // @require     https://fastly.jsdelivr.net/gh/sizzlemctwizzle/GM_config@2207c5c1322ebb56e401f03c2e581719f909762a/gm_config.js
 // @icon        https://www.minecraft.net/etc.clientlibs/minecraft/clientlibs/main/resources/favicon.ico
-// @version     1.0.0
+// @version     1.0.1
 // @grant       GM_getValue
 // @grant       GM_setValue
 // @grant       GM_setClipboard
@@ -88,7 +88,7 @@
     }
   };
 
-  var version = "1.0.0";
+  var version = "1.0.1";
 
   function getVersionType(url) {
     const lowerUrl = url.toLowerCase();
@@ -163,7 +163,7 @@
 
   function getHeader(articleType, type) {
     if (articleType.toLowerCase() !== 'news') {
-      return `[left][color=#388e3c][size=5]|[/size][/color][size=4]本文内容按照 [/size][url=https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh-hans][size=4][color=#2e8b57][u]CC BY-NC-SA 4.0[/u][/color][/size][/url][size=4] 协议进行授权，[b]转载本帖时须注明[color=#ff0000]原作者[/color]以及[color=#ff0000]本帖地址[/color][/b]。[/size][/left][hr]\n`;
+      return `[left][color=#388e3c][size=5]|[/size][/color][size=4]本文内容按照 [/size][url=https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh-hans][size=4][color=#2e8b57]CC BY-NC-SA 4.0[/color][/size][/url][size=4] 协议进行授权，[b]转载本帖时须注明[color=#ff0000]原作者[/color]以及[color=#ff0000]本帖地址[/color][/b]。[/size][/left][hr]\n`;
     }
 
     switch (type) {
@@ -172,37 +172,37 @@
 [color=#388e3c][size=5]|[/size][/color][size=4][b]每周快照[/b]是 Minecraft Java 版的测试机制，主要用于下一个正式版的特性预览。[/size]
 [color=#f44336][size=5]|[/size][/color][size=4]然而，[b]每周快照[/b]主要用于新特性展示，通常存在大量漏洞。因此对于普通玩家建议仅做[color=Red][b]测试尝鲜[/b][/color]用。在快照中打开存档前请务必[color=Red][b]进行备份[/b][/color]。[b]适用于正式版的 Mod 不兼容快照，且大多数 Mod 都不对每周快照提供支持[/b]。 [/size]
 [color=#f44336][size=5]|[/size][/color][size=4]Minecraft Java 版 <正式版版本号> 仍未发布，${versioncode} 为其第 <计数> 个预览版。[/size]
-[color=#388e3c][size=5]|[/size][/color][size=4]本文内容按照 [/size][url=https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh-hans][size=4][color=#2e8b57][u]CC BY-NC-SA 4.0[/u][/color][/size][/url][size=4] 协议进行授权，[b]转载本帖时须注明[color=#ff0000]原作者[/color]以及[color=#ff0000]本帖地址[/color][/b]。[/size][hr]\n`;
+[color=#388e3c][size=5]|[/size][/color][size=4]本文内容按照 [/size][url=https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh-hans][size=4][color=#2e8b57]CC BY-NC-SA 4.0[/color][/size][/url][size=4] 协议进行授权，[b]转载本帖时须注明[color=#ff0000]原作者[/color]以及[color=#ff0000]本帖地址[/color][/b]。[/size][hr]\n`;
 
       case VersionType.PreRelease:
         return `[color=#388e3c][size=5]|[/size][/color][size=4][b]Minecraft Java 版[/b]是指 Windows、Mac OS 与 Linux 平台上，使用 Java 语言开发的 Minecraft 版本。[/size]
 [color=#388e3c][size=5]|[/size][/color][size=4][b]预发布版[/b]是 Minecraft Java 版的测试机制，如果该版本作为正式版发布，那么预发布版的游戏文件将与启动器推送的正式版完全相同。[/size]
 [color=#f44336][size=5]|[/size][/color][size=4]然而，预发布版主要用于服主和 Mod 制作者的预先体验，如果发现重大漏洞，该预发布版会被新的预发布版代替。因此建议普通玩家[color=Red]持观望态度[/color]。 [/size]
 [color=#f44336][size=5]|[/size][/color][size=4]Minecraft Java 版 <正式版版本号> 仍未发布，<当前版本号> 为其第 <计数> 个预览版。[/size]
-[color=#388e3c][size=5]|[/size][/color][size=4]本文内容按照 [/size][url=https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh-hans][size=4][color=#2e8b57][u]CC BY-NC-SA 4.0[/u][/color][/size][/url][size=4] 协议进行授权，[b]转载本帖时须注明[color=#ff0000]原作者[/color]以及[color=#ff0000]本帖地址[/color][/b]。[/size][hr]\n`;
+[color=#388e3c][size=5]|[/size][/color][size=4]本文内容按照 [/size][url=https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh-hans][size=4][color=#2e8b57]CC BY-NC-SA 4.0[/color][/size][/url][size=4] 协议进行授权，[b]转载本帖时须注明[color=#ff0000]原作者[/color]以及[color=#ff0000]本帖地址[/color][/b]。[/size][hr]\n`;
 
       case VersionType.ReleaseCandidate:
         return `[color=#388e3c][size=5]|[/size][/color][size=4][b]Minecraft Java 版[/b]是指运行在 Windows、Mac OS 与 Linux 平台上，使用 Java 语言开发的 Minecraft 版本。[/size]
 [color=#388e3c][size=5]|[/size][/color][size=4][b]候选版[/b]是 Minecraft Java 版正式版的候选版本，如果发现重大漏洞，该候选版会被新的候选版代替。如果一切正常，该版本将会作为正式版发布。[/size]
 [color=#f44336][size=5]|[/size][/color][size=4]候选版已可供普通玩家进行抢鲜体验，但仍需当心可能存在的漏洞。[/size]
 [color=#f44336][size=5]|[/size][/color][size=4]Minecraft Java 版 <正式版版本号> 仍未发布，<当前版本号> 为其第 <计数> 个预览版。[/size]
-[color=#388e3c][size=5]|[/size][/color][size=4]本文内容按照 [/size][url=https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh-hans][size=4][color=#2e8b57][u]CC BY-NC-SA 4.0[/u][/color][/size][/url][size=4] 协议进行授权，[b]转载本帖时须注明[color=#ff0000]原作者[/color]以及[color=#ff0000]本帖地址[/color][/b]。[/size][hr]\n`;
+[color=#388e3c][size=5]|[/size][/color][size=4]本文内容按照 [/size][url=https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh-hans][size=4][color=#2e8b57]CC BY-NC-SA 4.0[/color][/size][/url][size=4] 协议进行授权，[b]转载本帖时须注明[color=#ff0000]原作者[/color]以及[color=#ff0000]本帖地址[/color][/b]。[/size][hr]\n`;
 
       case VersionType.Release:
         return `[color=#388e3c][size=5]|[/size][/color][size=4][b]Minecraft Java 版[/b]是指运行在 Windows、Mac OS 与 Linux 平台上，使用 Java 语言开发的 Minecraft 版本。[/size]
 [color=#f44336][size=5]|[/size][/color][size=4][b]正式版[/b]是 Minecraft Java 版经过一段时间的预览版测试后得到的稳定版本，也是众多纹理、Mod 与服务器插件会逐渐跟进的版本。官方启动器也会第一时间进行推送。 [/size]
 [color=#f44336][size=5]|[/size][/color][size=4]建议玩家与服主关注其相关服务端、Mod 与插件的更新，迎接新的正式版吧！专注于单人原版游戏的玩家可立即更新，多人游戏玩家请关注您所在服务器的通知。[/size]
-[color=#388e3c][size=5]|[/size][/color][size=4]本文内容按照 [/size][url=https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh-hans][size=4][color=#2e8b57][u]CC BY-NC-SA 4.0[/u][/color][/size][/url][size=4] 协议进行授权，[b]转载本帖时须注明[color=#ff0000]原作者[/color]以及[color=#ff0000]本帖地址[/color][/b]。[/size][hr]\n`;
+[color=#388e3c][size=5]|[/size][/color][size=4]本文内容按照 [/size][url=https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh-hans][size=4][color=#2e8b57]CC BY-NC-SA 4.0[/color][/size][/url][size=4] 协议进行授权，[b]转载本帖时须注明[color=#ff0000]原作者[/color]以及[color=#ff0000]本帖地址[/color][/b]。[/size][hr]\n`;
 
       case VersionType.BedrockRelease:
-        return `[left][color=#388e3c][size=5]|[/size][/color][size=4][b]Minecraft 基岩版[/b]是指运行在移动平台（Android、iOS）、Windows 10/11、主机（Xbox One、Switch、PlayStation 4/5）上，使用「基岩引擎」（C++语言）开发的 Minecraft 版本。[/size][/left][left][left][color=#f44336][size=5]|[/size][/color][size=4][b]正式版[/b]是 Minecraft 基岩版经过一段时间的测试版测试之后得到的稳定版本，也是众多纹理、附加包和 Realms 会逐渐跟进的版本。与此同时 Google Play、Microsoft Store 等官方软件商店也会推送此次更新。 [/size][/left][left][color=#388e3c][size=5]|[/size][/color][size=4]本文内容按照 [/size][url=https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh-hans][size=4][color=#2e8b57][u]CC BY-NC-SA 4.0[/u][/color][/size][/url][size=4] 协议进行授权，[b]转载本帖时须注明[color=#ff0000]原作者[/color]以及[color=#ff0000]本帖地址[/color][/b]。[/size][hr]\n`;
+        return `[left][color=#388e3c][size=5]|[/size][/color][size=4][b]Minecraft 基岩版[/b]是指运行在移动平台（Android、iOS）、Windows 10/11、主机（Xbox One、Switch、PlayStation 4/5）上，使用「基岩引擎」（C++语言）开发的 Minecraft 版本。[/size][/left][left][left][color=#f44336][size=5]|[/size][/color][size=4][b]正式版[/b]是 Minecraft 基岩版经过一段时间的测试版测试之后得到的稳定版本，也是众多纹理、附加包和 Realms 会逐渐跟进的版本。与此同时 Google Play、Microsoft Store 等官方软件商店也会推送此次更新。 [/size][/left][left][color=#388e3c][size=5]|[/size][/color][size=4]本文内容按照 [/size][url=https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh-hans][size=4][color=#2e8b57]CC BY-NC-SA 4.0[/color][/size][/url][size=4] 协议进行授权，[b]转载本帖时须注明[color=#ff0000]原作者[/color]以及[color=#ff0000]本帖地址[/color][/b]。[/size][hr]\n`;
 
       case VersionType.BedrockBeta:
-        return `[left][color=#388e3c][size=5]|[/size][/color][size=4][b]Minecraft 基岩版[/b]是指运行在移动平台（Android、iOS）、Windows 10/11、主机（Xbox One、Switch、PlayStation 4/5）上，使用「基岩引擎」（C++语言）开发的 Minecraft 版本。[/size][/left][left][color=#388e3c][size=5]|[/size][/color][size=4][b]测试版[/b]是 Minecraft 基岩版的测试机制，主要用于下一个正式版的特性预览。[/size][/left][/left][left][color=#f44336][size=5]|[/size][/color][size=4][b]然而，测试版主要用于新特性展示，通常存在大量漏洞。因此对于普通玩家建议仅做测试尝鲜用。使用测试版打开存档前请务必备份。适用于正式版的领域服务器与测试版不兼容。[/b] [/size][/left][/left][left][color=#f44336][size=5]|[/size][/color][size=4]如果在测试版中遇到旧版存档无法使用的问题，测试版将允许你将存档上传以供开发团队查找问题。[/size][/left][/left][left][color=#f44336][size=5]|[/size][/color][size=4]Minecraft 基岩版 <正式版版本号> 仍未发布，Beta & Preview ${versioncode} 为其第 <计数> 个测试版。[/size][/left][/left][left][color=#388e3c][size=5]|[/size][/color][size=4]本文内容按照 [/size][url=https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh-hans][size=4][color=#2e8b57][u]CC BY-NC-SA 4.0[/u][/color][/size][/url][size=4] 协议进行授权，[b]转载本帖时须注明[color=#ff0000]原作者[/color]以及[color=#ff0000]本帖地址[/color][/b]。[/size][/left][/left][/left][/left][hr]\n`;
+        return `[left][color=#388e3c][size=5]|[/size][/color][size=4][b]Minecraft 基岩版[/b]是指运行在移动平台（Android、iOS）、Windows 10/11、主机（Xbox One、Switch、PlayStation 4/5）上，使用「基岩引擎」（C++语言）开发的 Minecraft 版本。[/size][/left][left][color=#388e3c][size=5]|[/size][/color][size=4][b]测试版[/b]是 Minecraft 基岩版的测试机制，主要用于下一个正式版的特性预览。[/size][/left][/left][left][color=#f44336][size=5]|[/size][/color][size=4][b]然而，测试版主要用于新特性展示，通常存在大量漏洞。因此对于普通玩家建议仅做测试尝鲜用。使用测试版打开存档前请务必备份。适用于正式版的领域服务器与测试版不兼容。[/b] [/size][/left][/left][left][color=#f44336][size=5]|[/size][/color][size=4]如果在测试版中遇到旧版存档无法使用的问题，测试版将允许你将存档上传以供开发团队查找问题。[/size][/left][/left][left][color=#f44336][size=5]|[/size][/color][size=4]Minecraft 基岩版 <正式版版本号> 仍未发布，Beta & Preview ${versioncode} 为其第 <计数> 个测试版。[/size][/left][/left][left][color=#388e3c][size=5]|[/size][/color][size=4]本文内容按照 [/size][url=https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh-hans][size=4][color=#2e8b57]CC BY-NC-SA 4.0[/color][/size][/url][size=4] 协议进行授权，[b]转载本帖时须注明[color=#ff0000]原作者[/color]以及[color=#ff0000]本帖地址[/color][/b]。[/size][/left][/left][/left][/left][hr]\n`;
 
       case VersionType.Normal:
       default:
-        return `[left][color=#388e3c][size=5]|[/size][/color][size=4]本文内容按照 [/size][url=https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh-hans][size=4][color=#2e8b57][u]CC BY-NC-SA 4.0[/u][/color][/size][/url][size=4] 协议进行授权，[b]转载本帖时须注明[color=#ff0000]原作者[/color]以及[color=#ff0000]本帖地址[/color][/b]。[/size][/left][/left][/left][/left][hr]\n`;
+        return `[left][color=#388e3c][size=5]|[/size][/color][size=4]本文内容按照 [/size][url=https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh-hans][size=4][color=#2e8b57]CC BY-NC-SA 4.0[/color][/size][/url][size=4] 协议进行授权，[b]转载本帖时须注明[color=#ff0000]原作者[/color]以及[color=#ff0000]本帖地址[/color][/b]。[/size][/left][/left][/left][/left][hr]\n`;
     }
   }
   function getFooter(articleType, type) {
@@ -227,26 +227,26 @@ Converted at ${time.getFullYear()}-${padTime(time.getMonth() + 1) // why +1 java
 
     switch (type) {
       case VersionType.Snapshot:
-        return `\n${poweredBy}\n[hr][color=#388e3c][size=5]|[/size][/color][size=4][b]想了解更多游戏资讯？[/b][/size][list][*][size=3][url=https://www.minebbs.com/forums/news/][color=#388e3c][u]MineBBS - 新闻资讯版块[/u][/color][/url][/size][/list]`;
+        return `\n${poweredBy}\n[hr][color=#388e3c][size=5]|[/size][/color][size=4][b]想了解更多游戏资讯？[/b][/size][list][*][size=3][url=https://www.minebbs.com/forums/news/][color=#388e3c]MineBBS - 新闻资讯版块[/color][/url][/size][/list]`;
 
       case VersionType.PreRelease:
-        return `\n${poweredBy}\n[hr][color=#388e3c][size=5]|[/size][/color][size=4][b]想了解更多游戏资讯？[/b][/size][list][*][size=3][url=https://www.minebbs.com/forums/news/][color=#388e3c][u]MineBBS - 新闻资讯版块[/u][/color][/url][/size][/list]`;
+        return `\n${poweredBy}\n[hr][color=#388e3c][size=5]|[/size][/color][size=4][b]想了解更多游戏资讯？[/b][/size][list][*][size=3][url=https://www.minebbs.com/forums/news/][color=#388e3c]MineBBS - 新闻资讯版块[/color][/url][/size][/list]`;
 
       case VersionType.ReleaseCandidate:
-        return `\n${poweredBy}\n[hr][color=#388e3c][size=5]|[/size][/color][size=4][b]想了解更多游戏资讯？[/b][/size][list][*][size=3][url=https://www.minebbs.com/forums/news/][color=#388e3c][u]MineBBS - 新闻资讯版块[/u][/color][/url][/size][/list]`;
+        return `\n${poweredBy}\n[hr][color=#388e3c][size=5]|[/size][/color][size=4][b]想了解更多游戏资讯？[/b][/size][list][*][size=3][url=https://www.minebbs.com/forums/news/][color=#388e3c]MineBBS - 新闻资讯版块[/color][/url][/size][/list]`;
 
       case VersionType.Release:
-        return `\n${poweredBy}\n[hr][color=#388e3c][size=5]|[/size][/color][size=4][b]想了解更多游戏资讯？[/b][/size][list][*][size=3][url=https://www.minebbs.com/forums/news/][color=#388e3c][u]MineBBS - 新闻资讯版块[/u][/color][/url][/size][/list]`;
+        return `\n${poweredBy}\n[hr][color=#388e3c][size=5]|[/size][/color][size=4][b]想了解更多游戏资讯？[/b][/size][list][*][size=3][url=https://www.minebbs.com/forums/news/][color=#388e3c]MineBBS - 新闻资讯版块[/color][/url][/size][/list]`;
 
       case VersionType.BedrockRelease:
-        return `\n${poweredBy}\n[hr][color=#388e3c][size=5]|[/size][/color][size=4][b]想了解更多游戏资讯？[/b][/size][list][*][size=3][url=https://www.minebbs.com/forums/news/][color=#388e3c][u]MineBBS - 新闻资讯版块[/u][/color][/url][/size][/list]`;
+        return `\n${poweredBy}\n[hr][color=#388e3c][size=5]|[/size][/color][size=4][b]想了解更多游戏资讯？[/b][/size][list][*][size=3][url=https://www.minebbs.com/forums/news/][color=#388e3c]MineBBS - 新闻资讯版块[/color][/url][/size][/list]`;
 
       case VersionType.BedrockBeta:
-        return `\n${poweredBy}\n[hr][color=#388e3c][size=5]|[/size][/color][size=4][b]想了解更多游戏资讯？[/b][/size][list][*][size=3][url=https://www.minebbs.com/forums/news/][color=#388e3c][u]MineBBS - 新闻资讯版块[/u][/color][/url][/size][/list]`;
+        return `\n${poweredBy}\n[hr][color=#388e3c][size=5]|[/size][/color][size=4][b]想了解更多游戏资讯？[/b][/size][list][*][size=3][url=https://www.minebbs.com/forums/news/][color=#388e3c]MineBBS - 新闻资讯版块[/color][/url][/size][/list]`;
 
       case VersionType.Normal:
       default:
-        return `\n${poweredBy}\n[hr][color=#388e3c][size=5]|[/size][/color][size=4][b]想了解更多游戏资讯？[/b][/size][list][*][size=3][url=https://www.minebbs.com/forums/news/][color=#388e3c][u]MineBBS - 新闻资讯版块[/u][/color][/url][/size][/list]`;
+        return `\n${poweredBy}\n[hr][color=#388e3c][size=5]|[/size][/color][size=4][b]想了解更多游戏资讯？[/b][/size][list][*][size=3][url=https://www.minebbs.com/forums/news/][color=#388e3c]MineBBS - 新闻资讯版块[/color][/url][/size][/list]`;
     }
   }
   let VersionType;
@@ -274,7 +274,7 @@ Converted at ${time.getFullYear()}-${padTime(time.getMonth() + 1) // why +1 java
       [/Image credit:/gi, '图片来源：'], [/CC BY-NC-ND/gi, '知识共享 署名-非商业性使用-禁止演绎'], [/CC BY-NC-SA/gi, '知识共享 署名-非商业性使用-相同方式共享'], [/CC BY-NC/gi, '知识共享 署名-非商业性使用'], [/CC BY-ND/gi, '知识共享 署名-禁止演绎'], [/CC BY-SA/gi, '知识共享 署名-相同方式共享'], [/CC BY/gi, '知识共享 署名'], [/Public Domain/gi, '公有领域']]);
     },
     punctuation: (input, ctx) => {
-      return translator(input, ctx, [[/\[i\]/gi, '[font=楷体]'], [/\[\/i\]/g, '[/font]'], ...(ctx.disablePunctuationConverter ? [] : [[/,( |$)/g, '，'], [/!( |$)/g, '！'], [/\.\.\.( |$)/g, '…'], [/\.( |$)/g, '。'], [/\?( |$)/g, '？'], [/( |^)-( |$)/g, ' —— ']])], input => {
+      return translator(input, ctx, [[/\[i\]/gi, ''], [/\[\/i\]/g, ''], ...(ctx.disablePunctuationConverter ? [] : [[/,( |$)/g, '，'], [/!( |$)/g, '！'], [/\.\.\.( |$)/g, '…'], [/\.( |$)/g, '。'], [/\?( |$)/g, '？'], [/( |^)-( |$)/g, ' —— ']])], input => {
         return quoteTreatment(input, [['“', '”', /"/]]);
       });
     },
@@ -426,9 +426,11 @@ Converted at ${time.getFullYear()}-${padTime(time.getMonth() + 1) // why +1 java
           } else {
             return '';
           }
+        
+        case 'H5':
+          return converters.h5(node, ctx);
 
         case 'BUTTON':
-        case 'H5':
         case 'NAV':
         case 'svg':
         case 'SCRIPT':
@@ -437,6 +439,9 @@ Converted at ${time.getFullYear()}-${padTime(time.getMonth() + 1) // why +1 java
           } else {
             return '';
           }
+        
+        case 'FIGURE':
+          return converters.figure(node, ctx);
 
         default:
           console.warn(`Unknown type: '${node.nodeName}'.`);
@@ -471,7 +476,7 @@ Converted at ${time.getFullYear()}-${padTime(time.getMonth() + 1) // why +1 java
       let ans;
 
       if (url) {
-        ans = `[url=${url}][color=#388d40][u]${await converters.recurse(anchor, ctx)}[/u][/color][/url]`;
+        ans = `[url=${url}][color=#388d40]${await converters.recurse(anchor, ctx)}[/color][/url]`;
       } else {
         ans = await converters.recurse(anchor, ctx);
       }
@@ -563,7 +568,7 @@ Converted at ${time.getFullYear()}-${padTime(time.getMonth() + 1) // why +1 java
       return '';
     },
     dl: async (ele, ctx) => {
-      const ans = `\n\n${await converters.recurse(ele, ctx)}\n【本文排版借助了：[url=https://github.com/cinder0601/SPXXMB][color=#388d40][u]SPXXMB[/u][/color][/url] 用户脚本 v${spxxmbVersion}】\n\n`;
+      const ans = `\n\n${await converters.recurse(ele, ctx)}\n【本文排版借助了：[url=https://github.com/cinder0601/SPXXMB][color=#388d40]SPXXMB[/color][/url] 用户脚本 v${spxxmbVersion}】\n\n`;
       return ans;
     },
     dd: async (ele, ctx) => {
@@ -575,9 +580,9 @@ Converted at ${time.getFullYear()}-${padTime(time.getMonth() + 1) // why +1 java
         const date = ele.attributes.getNamedItem('data-value');
 
         if (date) {
-          ans = `[b]【${ctx.translator} 译自[url=${ctx.url}][color=#388d40][u]官网 ${date.value.slice(0, 4)} 年 ${date.value.slice(5, 7)} 月 ${date.value.slice(8, 10)} 日发布的 ${ctx.title}[/u][/color][/url]；原作者 ${ctx.author}】[/b]`;
+          ans = `[b]【${ctx.translator} 译自[url=${ctx.url}][color=#388d40]官网 ${date.value.slice(0, 4)} 年 ${date.value.slice(5, 7)} 月 ${date.value.slice(8, 10)} 日发布的 ${ctx.title}[/color][/url]；原作者 ${ctx.author}】[/b]`;
         } else {
-          ans = `[b]【${ctx.translator} 译自[url=${ctx.url}][color=#388d40][u]官网 * 年 * 月 * 日发布的 ${ctx.title}[/u][/color][/url]】[/b]`;
+          ans = `[b]【${ctx.translator} 译自[url=${ctx.url}][color=#388d40]官网 * 年 * 月 * 日发布的 ${ctx.title}[/color][/url]】[/b]`;
         }
       } else {
         // Written by:
@@ -617,6 +622,14 @@ Converted at ${time.getFullYear()}-${padTime(time.getMonth() + 1) // why +1 java
     },
     h4: async (ele, ctx) => {
       const prefix = '[size=3][b]';
+      const suffix = '[/b][/size]';
+      const rawInner = await converters.recurse(ele, ctx);
+      const inner = makeUppercaseHeader(rawInner);
+      const ans = `\n${prefix}[color=Silver]${usingSilver(inner).replace(/[\n\r]+/g, ' ')}[/color]${suffix}\n${prefix}${translate(`${inner}`, ctx, ['headings', 'punctuation']).replace(/[\n\r]+/g, ' ')}${suffix}\n\n`;
+      return ans;
+    },
+    h5: async (ele, ctx) => {
+      const prefix = '[size=2][b]';
       const suffix = '[/b][/size]';
       const rawInner = await converters.recurse(ele, ctx);
       const inner = makeUppercaseHeader(rawInner);
@@ -741,6 +754,10 @@ Converted at ${time.getFullYear()}-${padTime(time.getMonth() + 1) // why +1 java
       const ans = await converters.recurse(ele, ctx);
       return ans;
     },
+    figure: async (ele, ctx) => {
+      const ans = await converters.recurse(ele, ctx);
+      return ans;
+    },
     pre: async (ele, ctx) => {
       const ans = await converters.recurse(ele, { ...ctx,
         multiLineCode: true
@@ -749,11 +766,22 @@ Converted at ${time.getFullYear()}-${padTime(time.getMonth() + 1) // why +1 java
     },
     span: async (ele, ctx) => {
       const ans = await converters.recurse(ele, ctx);
-
-      if (ele.classList.contains('bedrock-server')) {
+      if (ele.classList.contains('MC_Effect_TextHighlightA')) {
+        // Special for MC_Effect_TextHighlightA element.
+        const textContent = await converters.recurse(ele, ctx);
+        const prefix = '[color=#7824c5]';
+        const suffix = '[/color]';
+        return `${prefix}${textContent}${suffix}`;
+      } else if (ele.classList.contains('MC_Effect_TextHighlightB')) {
+        // Special for MC_Effect_TextHighlightB element.
+        const textContent = await converters.recurse(ele, ctx);
+        const prefix = '[color=#7824c5]';
+        const suffix = '[/color]';
+        return `${prefix}${textContent}${suffix}`;
+      } else if (ele.classList.contains('bedrock-server')) {
         // Inline code.
-        const prefix = '[bgcolor=#f1edec][color=#7824c5]';
-        const suffix = '[/color][/bgcolor]';
+        const prefix = '[color=#7824c5]';
+        const suffix = '[/color]';
         return `${prefix}${await converters.recurse(ele, { ...ctx,
         disablePunctuationConverter: true
       })}${suffix}`;
@@ -767,7 +795,6 @@ Converted at ${time.getFullYear()}-${padTime(time.getMonth() + 1) // why +1 java
         const img = ele.firstElementChild;
         return await converters.img(img);
       }
-
       return ans;
     },
     strong: async (ele, ctx) => {
@@ -964,14 +991,36 @@ Converted at ${time.getFullYear()}-${padTime(time.getMonth() + 1) // why +1 java
 
   async function minecraftNet() {
     const url = document.location.toString();
-
+  
     if (url.match(/^https:\/\/www\.minecraft\.net\/(?:[a-z-]+)\/article\//)) {
-      const pointerModifier = document.getElementsByClassName('article-attribution-container').item(0);
-      pointerModifier.style.pointerEvents = 'inherit';
+      const authorContainer = document.querySelector('.MC_articleHeroA_attribution_author');
+      const dateElement = authorContainer.querySelector('dd:nth-child(4)'); // 获取发布日期的 dd 元素
+  
       const button = document.createElement('button');
-      button.classList.add('mc-button__primary', 'mc-button__green-s1', 'spxxmb-userscript-ignored');
+      button.classList.add('spxxmb-userscript-ignored');
       button.innerText = '复制 BBCode';
+      // 按钮样式设置
+      button.style.backgroundColor = '#3C8527';
+      button.style.color = '#FFFFFF';
+      button.style.border = 'none';
+      button.style.padding = '10px 20px';
+      button.style.borderRadius = '5px';
+      button.style.fontSize = '16px';
+      button.style.cursor = 'pointer';
+      button.style.transition = 'background-color 0.3s ease';
+      button.style.fontFamily = 'MinecraftTen, sans-serif';
 
+      button.style.width = '140px';
+      button.style.height = '45px';
+      button.style.textAlign = 'center';
+      button.style.marginLeft = 'auto';
+
+      button.onmouseover = () => {
+        button.style.backgroundColor = '#52A535';
+      };
+      button.onmouseout = () => {
+        button.style.backgroundColor = '#3C8527';
+      };
       button.onclick = async () => {
         button.innerText = '处理中...';
         const bbcode = await convertMCArticleToBBCode(document, url);
@@ -979,12 +1028,20 @@ Converted at ${time.getFullYear()}-${padTime(time.getMonth() + 1) // why +1 java
           type: 'text',
           mimetype: 'text/plain'
         });
-        button.innerText = '已复制 BBCode!';
-        setTimeout(() => button.innerText = '复制 BBCode', 5_000);
+        button.innerText = '已复制!';
+        setTimeout(() => button.innerText = '复制 BBCode', 5000);
       };
-
-      const container = document.getElementsByClassName('attribution').item(0);
+      const container = document.createElement('div');
+      container.id = 'spxxmb-buttons';
+      container.style.display = 'flex';
+      container.style.flexDirection = 'column';
+      container.style.alignItems = 'flex-end';
+      container.style.width = '100%';
+      container.style.padding = '10px';
+      container.style.boxSizing = 'border-box';
       container.append(button);
+      // 将按钮插入到日期下方
+      dateElement.insertAdjacentElement('afterend', button);
     }
   }
 
@@ -1020,6 +1077,8 @@ Converted at ${time.getFullYear()}-${padTime(time.getMonth() + 1) // why +1 java
 
     const header = getHeader(articleType, versionType);
     const heroImage = getHeroImage(html, articleType);
+    const maintitle = await getMainTitle(html);
+    const subtitle = await getSubTitle(html);
     const content = await getContent(html, {
       bugs,
       bugsTranslators,
@@ -1030,7 +1089,57 @@ Converted at ${time.getFullYear()}-${padTime(time.getMonth() + 1) // why +1 java
       url: articleUrl
     });
     const footer = getFooter(articleType, versionType);
-    const ans = `${header}${heroImage}${content}${footer}`;
+    const author = await getAuthor(html);
+    const ans = `${header}${heroImage}\n[center][color=silver][size=6][b]${maintitle}[/b][/size][/color][/center][align=center][size=6][b]${maintitle}[/b][/size][/center]\n[align=center][color=silver][size=2]${subtitle}[/size][/color][/center][align=center][size=2]${subtitle}[/size][/center]\n\n${content}[b]${author}\n\n${footer}`;
+    return ans;
+  }
+
+  async function convertMCArticleToBBCode(html, articleUrl, translator = config.translator) {
+    const articleType = getArticleType(html);
+    const versionType = getVersionType(articleUrl);
+    let bugs;
+
+    try {
+      bugs = await getBugs();
+    } catch (e) {
+      bugs = {};
+      console.error('[convertMCArticleToBBCode#getBugs]', e);
+    }
+
+    let bugsTranslators;
+
+    try {
+      bugsTranslators = await getBugsTranslators();
+    } catch (e) {
+      bugsTranslators = {};
+      console.error('[convertMCArticleToBBCode#getBugs]', e);
+    }
+
+    let translatorColor;
+
+    try {
+      translatorColor = await getTranslatorColor();
+    } catch (e) {
+      translatorColor = {};
+      console.error('[convertMCArticleToBBCode#getBugs]', e);
+    }
+
+    const header = getHeader(articleType, versionType);
+    const heroImage = getHeroImage(html, articleType);
+    const maintitle = await getMainTitle(html);
+    const subtitle = await getSubTitle(html);
+    const content = await getContent(html, {
+      bugs,
+      bugsTranslators,
+      translatorColor,
+      title: html.title.split(' | ').slice(0, -1).join(' | '),
+      date: null,
+      translator,
+      url: articleUrl
+    });
+    const footer = getFooter(articleType, versionType);
+    const author = await getAuthor(html);
+    const ans = `${header}${heroImage}\n[center][color=silver][size=6][b]${maintitle}[/b][/size][/color][/center][center][size=6][b]${maintitle}[/b][/size][/center]\n[center][color=silver][size=2]${subtitle}[/size][/color][/center][center][size=2]${subtitle}[/size][/center]\n\n${content}[b]${author}\n\n${footer}`;
     return ans;
   }
   /**
@@ -1040,7 +1149,8 @@ Converted at ${time.getFullYear()}-${padTime(time.getMonth() + 1) // why +1 java
 
   function getArticleType(html) {
     try {
-      const type = html.getElementsByClassName('article-category__text')?.[0]?.textContent ?? '';
+      const type = html.getElementsByClassName('MC_articleHeroA_category')?.[0]?.textContent ?? '';
+      console.log("ArticleType is ",type);
       return type.toUpperCase();
     } catch (e) {
       console.error('[getArticleType]', e);
@@ -1102,13 +1212,83 @@ Converted at ${time.getFullYear()}-${padTime(time.getMonth() + 1) // why +1 java
     ans = ans.replace(/(\[\/[^\]]+?\])([a-zA-Z0-9\-._])/g, '$1 $2'); // Append the server URL if it exists.
 
     return ans;
+  }async function getSubTitle(html) {
+    let con = html.getElementsByClassName("MC_articleHeroA_header_container")[0];
+    let subtitle = con.getElementsByClassName("MC_articleHeroA_header_subheadline")[0].innerText;
+    return subtitle;
+  }
+  async function getMainTitle(html) {
+    let con = html.getElementsByClassName("MC_articleHeroA_header_container")[0];
+    let maintitle = con.getElementsByClassName("MC_Heading_1")[0].innerText;
+    return maintitle;
+  }  
+
+  async function getAuthor(html, translator = config.translator) {
+    let rawauthor = html.getElementsByClassName("MC_articleHeroA_attribution_author")[0];
+    let authorImgUrl = rawauthor.getElementsByTagName("img")[0].src;
+    let authorName = rawauthor.getElementsByTagName("dd")[0].innerText;
+    let publishDate = rawauthor.getElementsByTagName("dd")[1].innerText;
+    let [year, month, day] = publishDate.split('/');
+    let url = window.location.href;
+    let title = await getMainTitle(html);
+    let ans = `\n[img]${authorImgUrl}[/img]\n\n\n【${translator} 译自[url=${url}][color=#388d40]${authorName} ${year} 年 ${month} 月 ${day} 日发布的 ${title}[/color][/url]】[/b]\n【本文排版借助了：[url=https://github.com/cinder0601/SPXXMB][color=#388d40]SPXXMB[/color][/url] 用户脚本 v${spxxmbVersion}】`;
+    console.log(ans);
+    return ans;
+  }
+
+  async function getContent(html, ctx) {
+    let results = [];
+    let elements = document.querySelectorAll('.MC_articleGridA_container.MC_articleGridA_grid, .MC_Carousel_track_slide.MC_Theme_Vanilla.MC_Carousel_track_slide__active, .MC_Carousel_track_slide.MC_Theme_Vanilla:not(.MC_Carousel_track_slide__copy)');
+    let container = document.createElement('div');
+
+    let seenElements = new Set();
+
+    Array.from(elements).forEach(element => {
+        let identifier = element.outerHTML;
+        if (!seenElements.has(identifier)) {
+            seenElements.add(identifier);
+            container.appendChild(element.cloneNode(true)); // cloneNode(true) 深拷贝元素
+        }
+    });
+
+    let containerElements = Array.from(container.children);
+
+    for (let i = 0; i < containerElements.length; i++) {
+        let rootDiv = containerElements[i];
+        let ans = await converters.recurse(rootDiv, ctx);
+        ans = ans.replace(/([a-zA-Z0-9\-._])(\[[A-Za-z])/g, '$1 $2');
+        ans = ans.replace(/(\[\/[^\]]+?\])([a-zA-Z0-9\-._])/g, '$1 $2');
+        results.push(ans);
+    }
+
+    return results.join("\n\n");
   }
 
   function getZendesk(controlDOM, titleSlice, contentClass, versionType) {
     const button = document.createElement('a');
-    button.classList.add('navLink');
+    button.classList.add('spxxmb-userscript-ignored', 'navLink');
     button.innerText = '复制 BBCode';
+    // 按钮样式设置
+    button.style.backgroundColor = '#3C8527';
+    button.style.color = '#FFFFFF';
+    button.style.border = 'none';
+    button.style.padding = '5px 10px';
+    button.style.borderRadius = '5px';
+    button.style.fontSize = '15px';
+    button.style.cursor = 'pointer';
+    button.style.transition = 'background-color 0.3s ease';
 
+    button.style.width = '120px';
+    button.style.height = '30px';
+    button.style.textAlign = 'center';
+    button.style.marginLeft = 'auto';
+
+    button.onmouseover = () => {
+      button.style.backgroundColor = '#52A535';
+    };
+    button.onmouseout = () => {
+      button.style.backgroundColor = '#3C8527';
+    };
     button.onclick = async () => {
       button.innerText = '处理中...';
       const bbcode = await convertZendeskArticleToBBCode(document, location.href, config.translator, titleSlice, contentClass, versionType);
@@ -1116,9 +1296,18 @@ Converted at ${time.getFullYear()}-${padTime(time.getMonth() + 1) // why +1 java
         type: 'text',
         mimetype: 'text/plain'
       });
-      button.innerText = '已复制 BBCode!';
+      button.innerText = '已复制!';
       setTimeout(() => button.innerText = '复制 BBCode', 5_000);
     };
+    const container = document.createElement('div');
+    container.id = 'spxxmb-buttons';
+    container.style.display = 'flex';
+    container.style.flexDirection = 'column';
+    container.style.alignItems = 'flex-end';
+    container.style.width = '100%';
+    container.style.padding = '10px';
+    container.style.boxSizing = 'border-box';
+    container.append(button);
 
     controlDOM(button);
   }
@@ -1162,25 +1351,54 @@ Converted at ${time.getFullYear()}-${padTime(time.getMonth() + 1) // why +1 java
     const content = document.getElementsByClassName('article-page-body');
 
     const button = document.createElement('a');
-    button.classList.add('navLink');
+    button.classList.add('spxxmb-userscript-ignored', 'navLink');
     button.innerText = '复制 BBCode';
+    // 按钮样式设置
+    button.style.backgroundColor = '#3C8527';
+    button.style.color = '#FFFFFF';
+    button.style.border = 'none';
+    button.style.padding = '5px 10px';
+    button.style.borderRadius = '5px';
+    button.style.fontSize = '15px';
+    button.style.cursor = 'pointer';
+    button.style.transition = 'background-color 0.3s ease';
 
-    button.onclick = async () => {
-        button.innerText = '处理中...';
-        let bbcode = await converthelpElementsToBBCode(heading, ctx);
-        let title = bbcode;
-        title = title.replace(/\n/g, '');
-        bbcode = `[left][color=#388e3c][size=5]|[/size][/color][size=4]本文内容按照 [/size][url=https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh-hans][size=4][color=#2e8b57][u]CC BY-NC-SA 4.0[/u][/color][/size][/url][size=4] 协议进行授权，[b]转载本帖时须注明[color=#ff0000]原作者[/color]以及[color=#ff0000]本帖地址[/color][/b]。[/size][/left][/left][/left][/left][hr]\n[size=6][b][color=silver]${bbcode}[/color][/b][/size][size=6][b]${bbcode}[/b][/size]\n`
-        bbcode += await converthelpElementsToBBCode(content, ctx);
-        bbcode += `[b]【${ctx.translator} 译自[url=${ctx.url}][color=#388d40][u] help.minecraft.net 上的 ${title}[/u][/color][/url]】[/b]\n【本文排版借助了：[url=https://github.com/cinder0601/SPXXMB][color=#388d40][u]SPXXMB[/u][/color][/url] 用户脚本 v${version}】\n`;
-        bbcode += getFooter('INSIDER',VersionType.Normal);
-        GM_setClipboard(bbcode, {
-            type: 'text',
-            mimetype: 'text/plain'
-        });
-        button.innerText = '已复制 BBCode!';
-        setTimeout(() => button.innerText = '复制 BBCode', 5000);
+    button.style.width = '120px';
+    button.style.height = '30px';
+    button.style.textAlign = 'center';
+    button.style.marginLeft = 'auto';
+
+    button.onmouseover = () => {
+      button.style.backgroundColor = '#52A535';
     };
+    button.onmouseout = () => {
+      button.style.backgroundColor = '#3C8527';
+    };
+    button.onclick = async () => {
+      button.innerText = '处理中...';
+      let bbcode = await converthelpElementsToBBCode(heading, ctx);
+      let title = bbcode;
+      title = title.replace(/\n/g, '');
+      bbcode = `[left][color=#388e3c][size=5]|[/size][/color][size=4]本文内容按照 [/size][url=https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh-hans][size=4][color=#2e8b57]CC BY-NC-SA 4.0[/color][/size][/url][size=4] 协议进行授权，[b]转载本帖时须注明[color=#ff0000]原作者[/color]以及[color=#ff0000]本帖地址[/color][/b]。[/size][/left][hr]\n[size=6][b][color=silver]${bbcode}[/color][/b][/size][size=6][b]${bbcode}[/b][/size]\n`
+      bbcode += await converthelpElementsToBBCode(content, ctx);
+      bbcode += `[b]【${ctx.translator} 译自[url=${ctx.url}][color=#388d40] help.minecraft.net 上的 ${title}[/color][/url]】[/b]\n【本文排版借助了：[url=https://github.com/cinder0601/SPXXMB][color=#388d40]SPXXMB[/color][/url] 用户脚本 v${version}】\n`;
+      bbcode += getFooter('INSIDER',VersionType.Normal);
+      GM_setClipboard(bbcode, {
+          type: 'text',
+          mimetype: 'text/plain'
+      });
+      button.innerText = '已复制!';
+      setTimeout(() => button.innerText = '复制 BBCode', 5000);
+  };
+    const container = document.createElement('div');
+    container.id = 'spxxmb-buttons';
+    container.style.display = 'flex';
+    container.style.flexDirection = 'column';
+    container.style.alignItems = 'flex-end';
+    container.style.width = '100%';
+    container.style.padding = '10px';
+    container.style.boxSizing = 'border-box';
+    container.append(button);
 
     controlDOM(button);
   }
@@ -1201,8 +1419,8 @@ Converted at ${time.getFullYear()}-${padTime(time.getMonth() + 1) // why +1 java
     const footer = versionType ? getFooter('news', versionType) : '';
     const ans = `${header}[center][size=6][b][color=Silver]${title}[/color][/b][/size]
 ${translate(`[size=6][b]${title}[/b][/size]`, ctx, 'headings')}[/center]\n\n${content}\n
-[b]【${ctx.translator} 译自[url=${ctx.url}][color=#388d40][u]${ctx.url.match(/https:\/\/(.*?)\//)[1]} ${posted.year} 年 ${posted.month} 月 ${posted.day} 日发布的 ${ctx.title}[/u][/color][/url]】[/b]
-【本文排版借助了：[url=https://github.com/cinder0601/SPXXMB][color=#388d40][u]SPXXMB[/u][/color][/url] 用户脚本 v${spxxmbVersion}】\n\n${footer}`;
+[b]【${ctx.translator} 译自[url=${ctx.url}][color=#388d40]${ctx.url.match(/https:\/\/(.*?)\//)[1]} ${posted.year} 年 ${posted.month} 月 ${posted.day} 日发布的 ${ctx.title}[/color][/url]】[/b]
+【本文排版借助了：[url=https://github.com/cinder0601/SPXXMB][color=#388d40]SPXXMB[/color][/url] 用户脚本 v${spxxmbVersion}】\n\n${footer}`;
     return ans;
   }
 
@@ -1320,24 +1538,41 @@ ${translate(`[size=6][b]${title}[/b][/size]`, ctx, 'headings')}[/center]\n\n${co
       for (const element of articleDivs) {
         let textContent = '';
         let rawContent = '';
-        if (element.tagName.toLowerCase() === 'span') {
-          textContent = element.innerHTML;
-          rawContent = element.textContent;
-          const links = element.querySelectorAll('a');
-          links.forEach(link => {
-            const url = link.href;
-            const linkText = link.innerText.trim();
-            const replacement = `[url=${url}][color=#00bfff][u]${linkText}[/u][/color][/url]`;
-            textContent = textContent.replace(link.outerHTML, replacement);
-            rawContent = rawContent.replace(link.outerHTML, linkText);
-          });
+    
+        if (element.tagName.toLowerCase() === 'a') {
+            const url = element.href;
+            console.log("1链接是", url);
+            let linkText = element.textContent.trim();  // 直接使用 a 标签的文本内容
+            console.log("1链接文本是", linkText);
+    
+            // 如果 a 标签中包含 span，并且 span 有前缀内容，剥离掉前缀
+            const span = element.querySelector('span');
+            if (span) {
+                let spanContent = span.textContent.trim();
+                linkText = linkText.replace(spanContent, '').trim();  // 移除 span 的前缀部分
+                console.log("2链接文本是", linkText);
+            }
+    
+            // 转换为 BBCode
+            textContent = `[url=${url}][color=#00bfff]${linkText}[/color][/url]`;
+            rawContent = linkText;
+    
+        } else if (element.tagName.toLowerCase() === 'span') {
+            if (!element.closest('a') && element.querySelectorAll('a').length === 0) {
+              textContent = element.innerHTML;
+              rawContent = element.textContent;
+            }
         } else if (element.tagName.toLowerCase() === 'img' && element.alt) {
-          textContent = element.alt;
-          rawContent = element.alt;
+            textContent = element.alt;
+            rawContent = element.alt;
         }
-        texts.push(textContent);
-        rawTexts.push(rawContent.replace(/<a.*?>(.*?)<\/a>/g, '$1'));
-      }
+    
+        // 确保 textContent 不为空再加入 texts
+        if (textContent.trim()) {
+            texts.push(textContent);
+            rawTexts.push(rawContent.replace(/<a.*?>(.*?)<\/a>/g, '$1'));
+        }
+      }             
       tweetMetadata.text = texts.join('');
       tweetMetadata.rawtext = rawTexts.join('');
       //I have tried my best but failed, if it still returns 'http://' or 'https://', please add the link manually.
@@ -1369,74 +1604,98 @@ ${translate(`[size=6][b]${title}[/b][/size]`, ctx, 'headings')}[/center]\n\n${co
 [color=${foregroundColor}][size=23px]${content}[/size]
   [/color][center]<如有配图，请在此处添加>
   [/center]
-  [size=15px][url=${tweet.tweetLink}][color=${attributeColor}][u]${dateString}[/u][/color][/url][/size][/td][/tr]
+  [size=15px][url=${tweet.tweetLink}][color=${attributeColor}]${dateString}[/color][/url][/size][/td][/tr]
   [/table][/center]`;
   }
 
   function x() {
-      console.info('[SPXXMB] Activated');
+    console.info('[SPXXMB] Activated');
 
-      const buttonLight = document.createElement('button');
-      buttonLight.innerText = '复制 BBCode (浅色)';
-      buttonLight.style.width = '100%';
-      buttonLight.onclick = async () => {
-          buttonLight.innerText = '处理中...';
-          try {
-              const bbcode = getTweetBbcode(getTweetMetadata(), 'light');
-              GM_setClipboard(bbcode, { type: 'text', mimetype: 'text/plain' });
-              buttonLight.innerText = '已复制 BBCode!';
-          } catch (error) {
-              console.error("Error processing BBCode (Light):", error);
-              buttonLight.innerText = '错误!';
-          }
-          setTimeout(() => buttonLight.innerText = '复制 BBCode (浅色)', 5000);
-      };
+    const buttonLight = document.createElement('button');
+    buttonLight.style.backgroundColor = 'rgb(255, 255, 255)';
+    buttonLight.style.color = '#000000';
+    buttonLight.style.border = 'none';
+    buttonLight.style.padding = '5px 10px';
+    buttonLight.style.borderRadius = '5px';
+    buttonLight.style.fontSize = '15px';
+    buttonLight.style.cursor = 'pointer';
+    buttonLight.style.transition = 'background-color 0.3s ease';
+    buttonLight.style.width = '180px';
+    buttonLight.style.height = '30px';
+    buttonLight.style.textAlign = 'center';
+    buttonLight.style.marginLeft = 'auto';
+    
+    buttonLight.onmouseover = () => {
+      buttonLight.style.backgroundColor = 'rgb(223, 223, 223)';
+    };
+    buttonLight.onmouseout = () => {
+      buttonLight.style.backgroundColor = 'rgb(255, 255, 255)';
+    };
+    buttonLight.innerText = '复制 BBCode (浅色)';
+    buttonLight.onclick = async () => {
+        buttonLight.innerText = '处理中...';
+        try {
+            const bbcode = getTweetBbcode(getTweetMetadata(), 'light');
+            GM_setClipboard(bbcode, { type: 'text', mimetype: 'text/plain' });
+            buttonLight.innerText = '已复制!';
+        } catch (error) {
+            console.error("Error processing BBCode (Light):", error);
+            buttonLight.innerText = '错误!';
+        }
+        setTimeout(() => buttonLight.innerText = '复制 BBCode (浅色)', 5000);
+    };
 
-      const buttonDark = document.createElement('button');
-      buttonDark.innerText = '复制 BBCode (深色)';
-      buttonDark.style.width = '100%';
-      buttonDark.onclick = async () => {
-          buttonDark.innerText = '处理中...';
-          try {
-              const bbcode = getTweetBbcode(getTweetMetadata(), 'dark');
-              GM_setClipboard(bbcode, { type: 'text', mimetype: 'text/plain' });
-              buttonDark.innerText = '已复制 BBCode!';
-          } catch (error) {
-              console.error("Error processing BBCode (Dark):", error);
-              buttonDark.innerText = '错误!';
-          }
-          setTimeout(() => buttonDark.innerText = '复制 BBCode (深色)', 5000);
-      };
+    const buttonDark = document.createElement('button');
+    buttonDark.style.backgroundColor = 'rgb(32, 32, 32)';
+    buttonDark.style.color = '#FFFFFF';
+    buttonDark.style.border = 'none';
+    buttonDark.style.padding = '5px 10px';
+    buttonDark.style.borderRadius = '5px';
+    buttonDark.style.fontSize = '15px';
+    buttonDark.style.cursor = 'pointer';
+    buttonDark.style.transition = 'background-color 0.3s ease';
+    buttonDark.style.width = '180px';
+    buttonDark.style.height = '30px';
+    buttonDark.style.textAlign = 'center';
+    buttonDark.style.marginLeft = 'auto';
+    
+    buttonDark.onmouseover = () => {
+      buttonDark.style.backgroundColor = 'rgb(42, 42, 42)';
+    };
+    buttonDark.onmouseout = () => {
+      buttonDark.style.backgroundColor = 'rgb(32, 32, 32)';
+    };
+    buttonDark.innerText = '复制 BBCode (深色)';
+    buttonDark.onclick = async () => {
+        buttonDark.innerText = '处理中...';
+        try {
+            const bbcode = getTweetBbcode(getTweetMetadata(), 'dark');
+            GM_setClipboard(bbcode, { type: 'text', mimetype: 'text/plain' });
+            buttonDark.innerText = '已复制!';
+        } catch (error) {
+            console.error("Error processing BBCode (Dark):", error);
+            buttonDark.innerText = '错误!';
+        }
+        setTimeout(() => buttonDark.innerText = '复制 BBCode (深色)', 5000);
+    };
 
-      const checkLoaded = setInterval(() => {
-          const targetDiv = document.querySelector('article div[lang]');
-          if (targetDiv && !document.querySelector('#spxxmb-buttons')) {
-              const container = document.createElement('div');
-              container.id = 'spxxmb-buttons';
-              container.style.display = 'flex';
-              container.style.flexDirection = 'column';
-              container.style.width = '100%';
-              container.style.justifyContent = 'flex-end';
-              buttonLight.style.backgroundColor = 'rgb(29, 155, 240)';
-              buttonDark.style.backgroundColor = 'rgb(29, 155, 240)';
-              buttonLight.style.borderColor = 'rgba(100, 149, 237, 0.5)';
-              buttonDark.style.borderColor = 'rgba(100, 149, 237, 0.5)';
-              buttonLight.style.borderRadius = '10px';
-              buttonDark.style.borderRadius = '10px';
-              buttonLight.style.textAlign = 'center';
-              buttonDark.style.textAlign = 'center';
-              buttonLight.style.marginLeft = 'auto';
-              buttonDark.style.marginLeft = 'auto';
-              buttonLight.style.width = '180px';
-              buttonLight.style.height = '25px';
-              buttonDark.style.width = '180px';
-              buttonDark.style.height = '25px';
-              container.append(buttonLight);
-              container.append(buttonDark);
-              targetDiv.parentElement.append(container);
-              clearInterval(checkLoaded);
-          }
-      }, 300);
+    const checkLoaded = setInterval(() => {
+        const targetDiv = document.querySelector('article div[lang]');
+        if (targetDiv && !document.querySelector('#spxxmb-buttons')) {
+          const container = document.createElement('div');
+          container.id = 'spxxmb-buttons';
+          container.style.display = 'flex';
+          container.style.flexDirection = 'column';
+          container.style.alignItems = 'flex-end';
+          container.style.width = '100%';
+          container.style.padding = '10px';
+          container.style.boxSizing = 'border-box';
+          container.append(buttonLight);
+          container.append(buttonDark);
+          targetDiv.parentElement.append(container);
+          clearInterval(checkLoaded);
+        }
+    }, 300);
   }
 
   x();
