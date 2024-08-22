@@ -22,6 +22,8 @@
 // @grant       GM_xmlhttpRequest
 // @grant       GM_registerMenuCommand
 // @license     MIT
+// @downloadURL https://update.greasyfork.org/scripts/504597/SPXXHi.user.js
+// @updateURL https://update.greasyfork.org/scripts/504597/SPXXHi.meta.js
 // ==/UserScript==
 (function () {
   'use strict';
