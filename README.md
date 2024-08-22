@@ -1,11 +1,11 @@
-# SPXXMB
-SPXXMB is a Minecraft.net ＆ X.com blog-to-BBCode converter based on SPXX User Script™️，adapted to minebbs.com in order to make Minecraft news translation easier.
+# SPXXHi
+SPXXHi is a Minecraft.net ＆ X.com blog-to-BBCode converter based on SPXX User Script™️，adapted to minebbs.com in order to make Minecraft news translation easier.
 
-SPXXMB 是一个基于 SPXX User Script™️ 的 Minecraft.net 、 feedback.minecraft.net 、 help.minecraft net 及 X.com 博文至 BBCode 转换器，进行了一系列修复、完善与调整以便适应 minebbs.com 的版块规定，令快讯翻译更便捷。
+SPXXHi 是一个基于 SPXX User Script™️ 的 Minecraft.net 、 feedback.minecraft.net 、 help.minecraft net 及 X.com 博文至 BBCode 转换器，进行了一系列修复、完善与调整以便适应 himcbbs.com 的版块规定，令快讯翻译更便捷。
 
-SPXXMB is licensed under MIT.
+SPXXHi is licensed under MIT.
 
-SPXXMB 采用 MIT 协议进行授权。
+SPXXHi 采用 MIT 协议进行授权。
 
 # About SPXX User Script™️
 SPXX is a project which rewrites SPX,focusing on assisting news translaters.
@@ -21,9 +21,9 @@ SPXX project is licensed under [CC0-1.0](https://creativecommons.org/publicdomai
 SPXX 项目使用 CC0-1.0 协议进行授权。
 
 # Contributers
-SPXXMB is written by Cinder0601 based on SPXX User Script v2.4.14 and SPX.
+SPXXHi is written by HiTech0926 based on SPXXMB User Script v1.0.0 and SPXX User Script v2.4.14 and SPX.
 
-SPXXMB 由 Cinder0601 基于 SPXX 用户脚本 v2.4.14 及 SPX 进行改写。
+SPXXHi 由 HiTech0926 基于 SPXXMB 用户脚本 v1.0.0 和 SPXX 用户脚本 v2.4.14 及 SPX 进行改写。
 
 Got help from [Redstone-D](https://github.com/Redstone-D) during development.
 
@@ -33,6 +33,10 @@ Got help from [Redstone-D](https://github.com/Redstone-D) during development.
 SPXX Project:https://github.com/SPXFellow/spxx
 
 SPXX 项目地址：https://github.com/SPXFellow/spxx
+
+SPXXMB Project:https://github.com/cinder0601/SPXXMB
+
+SPXXMB 项目地址：https://github.com/cinder0601/SPXXMB
 
 Sincere thanks to SPGoding and [SPXFellow](https://github.com/SPXFellow) for their tremendous contribution on SPXX™️,you ARE eternal newslords.
 
